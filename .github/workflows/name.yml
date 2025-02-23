@@ -1,0 +1,9 @@
+name: Name
+on: push
+jobs:
+  print:
+    name: useful job # ジョブ名を指定
+    runs-on: ubuntu-latest
+    steps:
+      - name: amazing script # ステップ名
+        run: echo "hello"
