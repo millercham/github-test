@@ -1,0 +1,9 @@
+name: Intermedioate Envrionment Variables
+on: push
+jobs:
+  print:
+    runs-on: ubunts-latest
+  env:
+    ACTOR: "${{ github.actor }}"
+  steps:
+    - run: echo "${ACTOR}"
