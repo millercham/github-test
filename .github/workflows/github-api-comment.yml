@@ -1,0 +1,15 @@
+name: GitHub API Comment
+run-name: Run by @${{ github.actor }}
+on: pull_request
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write # PRの書き込み許可
+      contents: read # ソース読み込み許可
+    steps:
+      - name: Comment
+        uses: actions/checkout@v4
+      - run: gh pr comment "${GITHUB_HEAD_REF}" --body "Hello, ${GITHUB_ACTOR}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
