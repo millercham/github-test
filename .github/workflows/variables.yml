@@ -2,7 +2,7 @@ name: Variables
 on:
   workflow_dispatch:
     inputs:
-      greeeting:
+      greeting:
         type: string
         default: Hello
         required: true
