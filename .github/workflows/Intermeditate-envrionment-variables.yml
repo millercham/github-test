@@ -1,8 +1,8 @@
-name: Intermedioate Envrionment Variables
+name: Intermeditate Envrionment Variables
 on: push
 jobs:
   print:
-    runs-on: ubunts-latest
+    runs-on: ubuntu-latest
     env:
       ACTOR: "${{ github.actor }}"
     steps:
