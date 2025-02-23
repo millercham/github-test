@@ -1,0 +1,8 @@
+name: Conditions worklow
+on: push
+jobs:
+  skip-or-run:
+    if: ${{ github.actor == 'octcat' }} # octcat以外のアカウントでは実行をスキップ
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello"
