@@ -1,0 +1,9 @@
+name: Bash Tracing
+on: push
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: set -x date hostname # set -xでトレースモードになる
