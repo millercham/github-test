@@ -6,4 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - run: set -x date hostname # set -xでトレースモードになる
+      - run: |
+          set -x
+          date
+          hostname
