@@ -1,0 +1,21 @@
+name: Sequential jobs
+on: push
+
+jobs:
+  first:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: sleep 10 && echo "first job done"
+  second:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: [first]
+    steps:
+      - run: sleep 10 && echo "second job done"
+  third:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: [second]
+    steps:
+      - run: sleep 10 && echo "third job done"
