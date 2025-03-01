@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - run: echo "result=Hello"" >> ${GITHUB_OUTPUT}"
+      - run: echo "result=Hello"" >> "${GITHUB_OUTPUT}"
       outputs:
         result: ${{ steps.first.outputs.result }}
   second:
