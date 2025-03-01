@@ -1,0 +1,12 @@
+name: Log Group
+on: push
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - run: |
+          echo "::group::show env variables"
+          printenv
+          echo "::endgroup::"
